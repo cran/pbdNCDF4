@@ -669,8 +669,7 @@ ncvar_get_inner <- function( ncid, varid, missval, addOffset=0., scaleFact=1.0, 
 			as.integer(byte_style), # 1=signed, 2=unsigned
 			data=as.integer(rv$data),
 			error=as.integer(rv$error),
-			PACKAGE="pbdNCDF4",
-			DUP=FALSE)
+			PACKAGE="pbdNCDF4")
 		if( rv$error != 0 ) 
 			stop("C function R_nc4_get_var_int returned error")
 		}
@@ -686,8 +685,7 @@ ncvar_get_inner <- function( ncid, varid, missval, addOffset=0., scaleFact=1.0, 
 			as.integer(c.count),	# Already switched to C convention...
 			data=as.double(rv$data),
 			error=as.integer(rv$error),
-			PACKAGE="pbdNCDF4",
-			DUP=FALSE)
+			PACKAGE="pbdNCDF4")
 		if( rv$error != 0 ) 
 			stop("C function R_nc4_get_vara_double returned error")
 		}
